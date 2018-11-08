@@ -1,0 +1,30 @@
+{
+  "name": "tier-0",
+  "version": "1.0.0",
+  "description": "Helpdesk automation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bur4an/tier-0.git"
+  },
+  "keywords": [
+    "Helpdesk",
+    "AD",
+    "Node.js",
+    "Powershell",
+    "Express"
+  ],
+  "author": "Burhan Kachwala, Aaron Corney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bur4an/tier-0/issues"
+  },
+  "homepage": "https://github.com/bur4an/tier-0#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-powershell": "^3.3.1"
+  }
+}
