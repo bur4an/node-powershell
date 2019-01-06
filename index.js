@@ -17,8 +17,8 @@ Router
 app.post('/adduser', (req, res) => {
 
       //testing
-      console.log(req.body.map((data) => {data.form.sections.map((fields) => field)}))
-      /*//PS configuration
+      //console.log(req.body.map((data) => {data.form.sections.map((fields) => field)}))
+      //PS configuration
         let ps = new shell({
           executionPolicy: 'Bypass',
           noProfile: true
@@ -33,13 +33,14 @@ app.post('/adduser', (req, res) => {
         //Do something with the Output...
         .then(output => {
           console.log(output);
+          ps.dispose()
         })
 
         // Do something with the error...
         .catch(err => {
           console.log(err);
           ps.dispose();
-        });*/
+        });
 
 
 })
@@ -47,5 +48,5 @@ app.post('/adduser', (req, res) => {
 /**
 Server
 **/
-const port = 3000
+const port = 1234
 app.listen(port, () => console.log(`Test app listening on port ${port}!`))
