@@ -14,9 +14,11 @@ app.use(express.json())
 /**
 Router
 **/
-app.post('/', (req, res) => {
+app.post('/adduser', (req, res) => {
 
-        //PS configuration
+      //testing
+      console.log(req.body.map((data) => {data.form.sections.map((fields) => field)}))
+      /*//PS configuration
         let ps = new shell({
           executionPolicy: 'Bypass',
           noProfile: true
@@ -37,13 +39,13 @@ app.post('/', (req, res) => {
         .catch(err => {
           console.log(err);
           ps.dispose();
-        });
+        });*/
 
 
 })
 
 /**
-Server Configurations
+Server
 **/
 const port = 3000
 app.listen(port, () => console.log(`Test app listening on port ${port}!`))
