@@ -2,8 +2,7 @@
 Import Modules
 **/
 const express = require('express') //Node server and routing
-const shell = require('node-powershell') //Powershell in Node.js
-const adduser = require('./ps-adduser') //Global object
+const addUser = require('./ps-adduser') //Global object
 
 /**
 Configurations
@@ -15,34 +14,8 @@ app.use(express.json())
 Router
 **/
 app.post('/adduser', (req, res) => {
-
-      //testing
-      //console.log(req.body.map((data) => {data.form.sections.map((fields) => field)}))
-      //PS configuration
-        let ps = new shell({
-          executionPolicy: 'Bypass',
-          noProfile: true
-        });
-
-        // Prepare PS Script
-        ps.addCommand(adduser(req.body))
-
-        // Execute PS Script
-        ps.invoke()
-
-        //Do something with the Output...
-        .then(output => {
-          console.log(output);
-          ps.dispose()
-        })
-
-        // Do something with the error...
-        .catch(err => {
-          console.log(err);
-          ps.dispose();
-        });
-
-
+    //testing
+    req.body.map(data => addUser(data.form.sections))
 })
 
 /**
